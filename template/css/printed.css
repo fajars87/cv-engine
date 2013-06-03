@@ -1,0 +1,199 @@
+@import url("reset.css");
+
+/*-------------------- MAIN BODY STYLES --------------------*/
+body {
+}
+
+#container {
+	margin: auto;
+	width: 861px;
+}
+
+#frame-middle_topline, #frame-bottom_topline {
+	float: left;
+	height: 25px;
+	width: 861px;
+	clear: both;
+}
+
+#frame-top_workarea, #frame-middle_workarea, #frame-bottom_workarea {
+	float: left;
+	width: 861px;
+	clear: both;
+}
+
+#frame-top_btmline , #frame-middle_btmline {
+	float: left;
+	height: 25px;
+	width: 861px;
+	clear: both;
+}
+
+#page {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	float: left;
+	width: 809px;
+	margin-left: 25px;
+	padding-bottom: 10px;
+}
+
+#photo {
+	height: 200px;
+	float: right;
+	margin-top: 40px;
+	margin-right: 50px;
+}
+
+#info {
+	height: 85px;
+	margin-top: 60px;
+	text-align: justify;
+	margin-left: 30px;
+	margin-right: 30px;
+
+	font-size: 30pt;
+	color: #000000;
+	letter-spacing: -1px;
+
+}
+
+#printable {
+	float: left;
+	margin-left: 35px;
+	margin-top: 20px;
+}
+
+#i18n
+{
+	float: right;
+	margin-right: 35px;
+	margin-top: 20px;
+}
+
+#w3c {
+	float: left;
+	margin-left: 35px;
+	margin-bottom: 10px;
+}
+
+#copyright
+{
+	float: right;
+	margin-right: 35px;
+	margin-bottom: 10px;
+}
+
+.clear { 
+	clear: both;
+}
+
+.free_space { 
+	height: 20px;
+	clear: both; 
+}
+
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	margin-left: 30px;
+	font-size: 30pt;
+	color: #000000;
+	letter-spacing: -1px;
+	margin-bottom: 30px;
+}
+
+h2 {
+	margin-left: 30px;
+	font-size: 19pt;
+	color: #000000;
+	letter-spacing: -1px;
+	margin-bottom: 15px;
+}
+
+h3 {
+	color: #000000;
+	font-size: 12pt;
+	margin-bottom: 5px;
+	letter-spacing: -1px;
+}
+
+/* description table style */
+
+.table_top_border
+{
+	background-image: url(../images/divider.png);
+	background-repeat: repeat-x;
+	height: 1px;
+	width: 497px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin-right: 50px;
+	float: right;
+}
+
+.table_bottom_border
+{
+	background-image: url(../images/divider.png);
+	background-repeat: repeat-x;
+	height: 1px;
+	width: 497px;
+	margin-top: 1px;
+	margin-bottom: 14px;
+	margin-right: 50px;
+	float: right;
+}
+
+table.description {
+	margin-left: auto; 
+	margin-right: auto;
+	font-size: 9pt;
+	color: #000000;
+	width: 709px;
+	border: 0px;
+}
+
+table.description td {
+	text-align: left;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #000000;
+}
+
+table.description tr td:first-child {
+	background-color: #E6E6E6;
+	text-align: right;
+	padding-right: 5px;
+	width: 180px;
+	vertical-align: text-top;
+}
+
+/* table links style */
+
+table.links td {
+	vertical-align: middle;
+	text-align: left;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+	color: #EEEEEE;
+}
