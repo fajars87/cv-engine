@@ -24,4 +24,9 @@
         </testsuite>
     </testsuites>
 
+    <testsuites>
+        <testsuite name="Generator Test Suite">
+            <file>generator/DocxGeneratorTest.php</file>
+        </testsuite>
+    </testsuites>
 </phpunit>
