@@ -41,6 +41,9 @@ class Autoloader {
         'Db' => '/db/Db.php',
         'ORM' => '/utils/db/lib/idiorm.php',
 
+        'DocxGenerator' => '/DocxGenerator.php',
+        'Generator' => '/Generator.php',
+        'PHPWord' => '/utils/generator/PHPWord.php',
     );
 
     public static function autoload($className) {
