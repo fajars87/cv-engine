@@ -1,0 +1,36 @@
+<project name="cv-engine" default="dist" basedir="..">
+	<target name="clean">
+		<delete dir="${basedir}/dist"/>
+	</target>
+
+	<target name="init">
+	</target>
+
+	<target name="phpunit">
+		<exec dir="${basedir}/unittests" executable="cmd" failonerror="true">
+			<arg value="/c"/>
+			<arg value="phpunit"/>
+			<arg value="--stop-on-error"/>
+			<arg value="--verbose"/>
+		</exec>
+	</target>
+
+	<target name="pdf">
+		<exec dir="${basedir}/build" executable="cmd" failonerror="true">
+			<arg value="/c"/>
+			<arg value="CScript"/>
+			<arg value="docx2pdf.vbs"/>
+		</exec>
+	</target>
+
+	<target name="zip">
+	</target>
+
+	<target name="cleanup">
+	</target>
+
+	<target name="dist" depends="clean,init,phpunit,pdf,zip,cleanup"/>
+
+	<target name="deploy" depends="dist">
+	</target>
+</project>
