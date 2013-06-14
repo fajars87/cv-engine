@@ -1,8 +1,8 @@
 Option Explicit
  
-Const CV_EN = "..\files\S.Grigoriev_CV.docx"
-Const CV_DE = "..\files\S.Grigoriev_Lebenslauf.docx"
-Const CV_RU = "..\files\Ñ.Ãðèãîðüåâ_ðåçþìå.docx"
+Const CV_EN = "..\sources\files\S.Grigoriev_CV.docx"
+Const CV_DE = "..\sources\files\S.Grigoriev_Lebenslauf.docx"
+Const CV_RU = "..\sources\files\Ð¡.Ð“Ñ€Ð¸Ð³Ð¾Ñ€ÑŒÐµÐ²_Ñ€ÐµÐ·ÑŽÐ¼Ðµ.docx"
  
  
 'Call the main routine
@@ -10,9 +10,9 @@ Main
 
 ' Main routine
 Sub Main()
-	SaveWordAsPDF CV_EN
-	SaveWordAsPDF CV_DE
-	SaveWordAsPDF CV_RU
+	SaveWordAsPDF(CV_EN)
+	SaveWordAsPDF(CV_DE)
+	SaveWordAsPDF(StrConv(CV_RU, "UTF-8", "windows-1251"))
 End Sub
  
 ' This subroutine opens a Word document, then saves it as PDF, and closes Word.
@@ -26,18 +26,31 @@ Sub SaveWordAsPDF(inputFile)
 	If objFSO.FileExists(inputFile) Then
 		Set objDocxFile = objFSO.GetFile(inputFile)
 	Else
-		WScript.Echo "File " & inputFile & " does not exist" & vbCrLf
-		WScript.Quit 1
+		WScript.Echo("File " & inputFile & " does not exist" & vbCrLf)
+		WScript.Quit(1)
 	End If
 
-	Set objWord = CreateObject( "Word.Application" )
+	Set objWord = CreateObject("Word.Application")
 	
 	objWord.Visible = False
-	objWord.Documents.Open objDocxFile.Path
+	objWord.Documents.Open(objDocxFile.Path)
 
 	Set objDocument = objWord.ActiveDocument
-	objDocument.SaveAs objFSO.BuildPath( objDocxFile.ParentFolder, objFSO.GetBaseName( objDocxFile ) & ".pdf" ), 17
+	objDocument.SaveAs objFSO.BuildPath(objDocxFile.ParentFolder, objFSO.GetBaseName(objDocxFile) & ".pdf"), 17
 	objDocument.Close
 
 	objWord.Quit
 End Sub
+
+Function StrConv(Text,SourceCharset,DestCharset)
+	Dim Stream
+	Set Stream = CreateObject("ADODB.Stream")
+	Stream.Type = 2
+	Stream.Mode = 3
+	Stream.Open
+	Stream.Charset = DestCharset
+	Stream.WriteText Text
+	Stream.Position = 0
+	Stream.Charset = SourceCharset
+	StrConv = Stream.ReadText
+End Function

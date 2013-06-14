@@ -7,11 +7,11 @@
 	</target>
 
 	<target name="phpunit">
-		<exec dir="${basedir}/unittests" executable="cmd" failonerror="true">
+		<exec dir="${basedir}/tests" executable="cmd" failonerror="true">
 			<arg value="/c"/>
 			<arg value="phpunit"/>
 			<arg value="--stop-on-error"/>
-			<arg value="--verbose"/>
+			<arg value="-v"/>
 		</exec>
 	</target>
 

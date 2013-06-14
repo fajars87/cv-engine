@@ -3,6 +3,8 @@
  * Author: Sergey Grigoriev
  */
 
+require_once dirname(__FILE__) . '/../../../sources/Autoloader.php';
+
 class DocxGeneratorTest extends PHPUnit_Framework_TestCase {
 
     public function testGenerateDocxEn() {

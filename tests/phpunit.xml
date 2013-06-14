@@ -9,24 +9,24 @@
         processIsolation            = "false"
         stopOnFailure               = "false"
         syntaxCheck                 = "true"
-        bootstrap                   = "bootstrap.php" >
+        bootstrap                   = "unit/bootstrap.php" >
 
     <testsuites>
         <testsuite name="DB Test Suite">
-            <file>db/DbInitTest.php</file>
-            <file>db/DbTest.php</file>
+            <file>unit/db/DbInitTest.php</file>
+            <file>unit/db/DbTest.php</file>
         </testsuite>
     </testsuites>
 
     <testsuites>
         <testsuite name="CV Test Suite">
-            <file>page/CVPageTest.php</file>
+            <file>unit/page/CVPageTest.php</file>
         </testsuite>
     </testsuites>
 
     <testsuites>
         <testsuite name="Generator Test Suite">
-            <file>generator/DocxGeneratorTest.php</file>
+            <file>unit/generator/DocxGeneratorTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
