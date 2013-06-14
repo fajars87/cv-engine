@@ -1,0 +1,7 @@
+.idea
+dist
+tmp
+sources/grigoriev_cv.sqlite
+sources/files/*.pdf
+sources/files/*.docx
+build/build.properties
