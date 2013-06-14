@@ -47,7 +47,7 @@
                 <include name="**/*.sqlite"/>
 
                 <exclude name="**/files/*template*"/>
-                <exclude name="**/db/init/**"/>
+                <exclude name="**/db/init/*Init*"/>
                 <exclude name="**/utils/generator/**"/>
             </fileset>
         </copy>
@@ -62,24 +62,39 @@
 
         <unzip src="${dist.dir}/${zip.name}" dest="${tmp.dir}"/>
 
-        <!--ftp action="rmdir"
-             server="${ftp.hostname}"
-             userid="${ftp.username}"
-             password="${ftp.password}"
-             remotedir="${ftp.remote_path}">
-        </ftp-->
-
+        <!-- create folder to deploy; if already exists: nothing to do -->
         <ftp action="mkdir"
              server="${ftp.hostname}"
              userid="${ftp.username}"
              password="${ftp.password}"
-             remotedir="${ftp.remote_path}"/>
+             remotedir="${ftp.remotedir}"/>
+
+        <!-- if folder exists: remove content in two steps -- first all files, then all folders; if folder is empty -- nothing to delete -->
+        <ftp action="del"
+             server="${ftp.hostname}"
+             userid="${ftp.username}"
+             password="${ftp.password}"
+             remotedir="${ftp.remotedir}">
+            <fileset>
+                <include name="**/*"/>
+            </fileset>
+        </ftp>
+
+        <ftp action="rmdir"
+             server="${ftp.hostname}"
+             userid="${ftp.username}"
+             password="${ftp.password}"
+             remotedir="${ftp.remotedir}">
+            <fileset>
+                <include name="**/*"/>
+            </fileset>
+        </ftp>
 
         <ftp server="${ftp.hostname}"
              port="${ftp.port}"
              userid="${ftp.username}"
              password="${ftp.password}"
-             remotedir="${ftp.remote_path}"
+             remotedir="${ftp.remotedir}"
              passive="no"
              depends="no"
              binary="yes"
