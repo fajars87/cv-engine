@@ -4,6 +4,8 @@
  */
 
 class Generator {
+    const VALUE = '_value';
+    const UNDERSCORE = '_';
 
     const PERSON = 'person_';
     const NAME = 'name';
@@ -42,6 +44,16 @@ class Generator {
     const AWARDED = 'awarded';
     const DATE = 'date';
 
+    const SKILLS = 'skills_';
+    const TECHNICAL_SKILLS = 'technical_skills';
+    const TECHNOLOGY = 'technology';
+    const EXPERIENCE_YEARS = 'experience';
+    const PROFICIENCY = 'proficiency';
+    const C = 'c';
+    const T = 't';
+    const N = 'n';
+    const E = 'e';
+    const P = 'p';
 
     const PROJECT = 'project_';
     const PROJECTS = 'projects';
@@ -50,12 +62,6 @@ class Generator {
     const TECHNOLOGIES = 'technologies';
     const OPERATING_SYSTEMS = 'operating_systems';
     const PROJECT_DURATION = 'project_duration';
-
-
-    const TECHNICAL_SKILLS = 'technical_skills';
-    const TECHNOLOGY = 'technology';
-    const EXPERIENCE_YEARS = 'experience';
-    const PROFICIENCY = 'proficiency';
 
 
 }

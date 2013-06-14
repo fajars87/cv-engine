@@ -250,7 +250,7 @@ class DbTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(GrigorievEn::LANGUAGE_LEVEL_B2, $sg_en[0]->{languages::LEVEL});
 
         $this->assertEquals(GrigorievEn::LANGUAGE_GERMAN, $sg_en[1]->{languages::LANGUAGE});
-        $this->assertEquals(GrigorievEn::LANGUAGE_LEVEL_A2, $sg_en[1]->{languages::LEVEL});
+        $this->assertEquals(GrigorievEn::LANGUAGE_LEVEL_B1, $sg_en[1]->{languages::LEVEL});
 
         $this->assertEquals(GrigorievEn::LANGUAGE_RUSSIAN, $sg_en[2]->{languages::LANGUAGE});
         $this->assertEquals(GrigorievEn::LANGUAGE_LEVEL_NATIVE, $sg_en[2]->{languages::LEVEL});
@@ -266,33 +266,37 @@ class DbTest extends PHPUnit_Framework_TestCase {
 
         $this->assertNotEquals(false, $sg_en);
 
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_TITLE, $sg_en[0]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_AWARDED, $sg_en[0]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_DATE, $sg_en[0]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_TITLE, $sg_en[0]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_AWARDED, $sg_en[0]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_DATE, $sg_en[0]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_TITLE, $sg_en[1]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_AWARDED, $sg_en[1]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_DATE, $sg_en[1]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_TITLE, $sg_en[1]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_AWARDED, $sg_en[1]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_DATE, $sg_en[1]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_TITLE, $sg_en[2]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_AWARDED, $sg_en[2]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_DATE, $sg_en[2]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_TITLE, $sg_en[2]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_AWARDED, $sg_en[2]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_DATE, $sg_en[2]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_TITLE, $sg_en[3]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_AWARDED, $sg_en[3]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_DATE, $sg_en[3]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_TITLE, $sg_en[3]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_AWARDED, $sg_en[3]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_DATE, $sg_en[3]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_TITLE, $sg_en[4]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_AWARDED, $sg_en[4]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_DATE, $sg_en[4]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_TITLE, $sg_en[4]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_AWARDED, $sg_en[4]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_DATE, $sg_en[4]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_TITLE, $sg_en[5]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_AWARDED, $sg_en[5]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_DATE, $sg_en[5]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_TITLE, $sg_en[5]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_AWARDED, $sg_en[5]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_DATE, $sg_en[5]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_TITLE, $sg_en[6]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_AWARDED, $sg_en[6]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_DATE, $sg_en[6]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_TITLE, $sg_en[6]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_AWARDED, $sg_en[6]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_DATE, $sg_en[6]->{courses_and_certificates::DATE});
+
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_TITLE, $sg_en[7]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_AWARDED, $sg_en[7]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievEn::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_DATE, $sg_en[7]->{courses_and_certificates::DATE});
     }
 
     public function testTechnicalSkillsEn() {
@@ -733,7 +737,7 @@ class DbTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(GrigorievDe::LANGUAGE_LEVEL_B2, $sg_de[0]->{languages::LEVEL});
 
         $this->assertEquals(GrigorievDe::LANGUAGE_GERMAN, $sg_de[1]->{languages::LANGUAGE});
-        $this->assertEquals(GrigorievDe::LANGUAGE_LEVEL_A2, $sg_de[1]->{languages::LEVEL});
+        $this->assertEquals(GrigorievDe::LANGUAGE_LEVEL_B1, $sg_de[1]->{languages::LEVEL});
 
         $this->assertEquals(GrigorievDe::LANGUAGE_RUSSIAN, $sg_de[2]->{languages::LANGUAGE});
         $this->assertEquals(GrigorievDe::LANGUAGE_LEVEL_NATIVE, $sg_de[2]->{languages::LEVEL});
@@ -749,33 +753,37 @@ class DbTest extends PHPUnit_Framework_TestCase {
 
         $this->assertNotEquals(false, $sg_de);
 
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_TITLE, $sg_de[0]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_AWARDED, $sg_de[0]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_DATE, $sg_de[0]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_TITLE, $sg_de[0]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_AWARDED, $sg_de[0]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_DATE, $sg_de[0]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_TITLE, $sg_de[1]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_AWARDED, $sg_de[1]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_DATE, $sg_de[1]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_TITLE, $sg_de[1]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_AWARDED, $sg_de[1]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_DATE, $sg_de[1]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_TITLE, $sg_de[2]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_AWARDED, $sg_de[2]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_DATE, $sg_de[2]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_TITLE, $sg_de[2]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_AWARDED, $sg_de[2]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_DATE, $sg_de[2]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_TITLE, $sg_de[3]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_AWARDED, $sg_de[3]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_DATE, $sg_de[3]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_TITLE, $sg_de[3]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_AWARDED, $sg_de[3]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_DATE, $sg_de[3]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_TITLE, $sg_de[4]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_AWARDED, $sg_de[4]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_DATE, $sg_de[4]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_TITLE, $sg_de[4]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_AWARDED, $sg_de[4]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_DATE, $sg_de[4]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_TITLE, $sg_de[5]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_AWARDED, $sg_de[5]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_DATE, $sg_de[5]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_TITLE, $sg_de[5]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_AWARDED, $sg_de[5]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_DATE, $sg_de[5]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_TITLE, $sg_de[6]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_AWARDED, $sg_de[6]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_DATE, $sg_de[6]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_TITLE, $sg_de[6]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_AWARDED, $sg_de[6]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_DATE, $sg_de[6]->{courses_and_certificates::DATE});
+
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_TITLE, $sg_de[7]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_AWARDED, $sg_de[7]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievDe::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_DATE, $sg_de[7]->{courses_and_certificates::DATE});
     }
 
     public function testTechnicalSkillsDe() {
@@ -1216,7 +1224,7 @@ class DbTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(GrigorievRu::LANGUAGE_LEVEL_B2, $sg_ru[0]->{languages::LEVEL});
 
         $this->assertEquals(GrigorievRu::LANGUAGE_GERMAN, $sg_ru[1]->{languages::LANGUAGE});
-        $this->assertEquals(GrigorievRu::LANGUAGE_LEVEL_A2, $sg_ru[1]->{languages::LEVEL});
+        $this->assertEquals(GrigorievRu::LANGUAGE_LEVEL_B1, $sg_ru[1]->{languages::LEVEL});
 
         $this->assertEquals(GrigorievRu::LANGUAGE_RUSSIAN, $sg_ru[2]->{languages::LANGUAGE});
         $this->assertEquals(GrigorievRu::LANGUAGE_LEVEL_NATIVE, $sg_ru[2]->{languages::LEVEL});
@@ -1232,33 +1240,37 @@ class DbTest extends PHPUnit_Framework_TestCase {
 
         $this->assertNotEquals(false, $sg_ru);
 
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_TITLE, $sg_ru[0]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_AWARDED, $sg_ru[0]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_DATE, $sg_ru[0]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_TITLE, $sg_ru[0]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_AWARDED, $sg_ru[0]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_DATE, $sg_ru[0]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_TITLE, $sg_ru[1]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_AWARDED, $sg_ru[1]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_DATE, $sg_ru[1]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_TITLE, $sg_ru[1]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_AWARDED, $sg_ru[1]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_DATE, $sg_ru[1]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_TITLE, $sg_ru[2]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_AWARDED, $sg_ru[2]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_DATE, $sg_ru[2]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_TITLE, $sg_ru[2]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_AWARDED, $sg_ru[2]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_TDD_IN_JAVA_DATE, $sg_ru[2]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_TITLE, $sg_ru[3]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_AWARDED, $sg_ru[3]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_DATE, $sg_ru[3]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_TITLE, $sg_ru[3]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_AWARDED, $sg_ru[3]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_AGILE_ENGINEERING_PRACTICES_DATE, $sg_ru[3]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_TITLE, $sg_ru[4]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_AWARDED, $sg_ru[4]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_DATE, $sg_ru[4]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_TITLE, $sg_ru[4]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_AWARDED, $sg_ru[4]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_A2_DATE, $sg_ru[4]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_TITLE, $sg_ru[5]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_AWARDED, $sg_ru[5]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_DATE, $sg_ru[5]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_TITLE, $sg_ru[5]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_AWARDED, $sg_ru[5]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_IBM_RATIONAL_CLEARCASE_DATE, $sg_ru[5]->{courses_and_certificates::DATE});
 
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_TITLE, $sg_ru[6]->{courses_and_certificates::TITLE});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_AWARDED, $sg_ru[6]->{courses_and_certificates::AWARDED});
-        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_DATE, $sg_ru[6]->{courses_and_certificates::DATE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_TITLE, $sg_ru[6]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_AWARDED, $sg_ru[6]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_ESTIMATIONS_FOR_SOFTWARE_PROJECTS_DATE, $sg_ru[6]->{courses_and_certificates::DATE});
+
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_TITLE, $sg_ru[7]->{courses_and_certificates::TITLE});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_AWARDED, $sg_ru[7]->{courses_and_certificates::AWARDED});
+        $this->assertEquals(GrigorievRu::COURSE_AND_CERTIFICATE_SOFTWARE_REQUIREMENTS_DEVELOPMENT_AND_MANAGEMENT_DATE, $sg_ru[7]->{courses_and_certificates::DATE});
     }
 
     public function testTechnicalSkillsRu() {

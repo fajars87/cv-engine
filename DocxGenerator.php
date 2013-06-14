@@ -4,8 +4,6 @@
  */
 
 class DocxGenerator {
-    const VALUE = '_value';
-
     private $PHPWord;
     private $document;
     private $language;
@@ -98,29 +96,29 @@ class DocxGenerator {
     }
 
     private function setPersonalInformation($person) {
-        $this->document->setValue(Generator::PERSON . Generator::NAME . self::VALUE, $person->{persons::NAME});
-        $this->document->setValue(Generator::PERSON . Generator::JOB_TITLE . self::VALUE, $person->{persons::JOB_TITLE});
+        $this->document->setValue(Generator::PERSON . Generator::NAME . Generator::VALUE, $person->{persons::NAME});
+        $this->document->setValue(Generator::PERSON . Generator::JOB_TITLE . Generator::VALUE, $person->{persons::JOB_TITLE});
 
-        $this->document->setValue(Generator::PERSON . Generator::ADDRESS . self::VALUE, $person->{persons::ADDRESS});
-        $this->document->setValue(Generator::PERSON . Generator::PHONE . self::VALUE, $person->{persons::PHONE});
-        $this->document->setValue(Generator::PERSON . Generator::EMAIL . self::VALUE, $person->{persons::EMAIL});
-        $this->document->setValue(Generator::PERSON . Generator::SKYPE . self::VALUE, $person->{persons::SKYPE});
-        $this->document->setValue(Generator::PERSON . Generator::DATE_OF_BIRTH . self::VALUE, $person->{persons::DATE_OF_BIRTH});
-        $this->document->setValue(Generator::PERSON . Generator::PLACE_OF_BIRTH . self::VALUE, $person->{persons::PLACE_OF_BIRTH});
-        $this->document->setValue(Generator::PERSON . Generator::STATUS . self::VALUE, $person->{marital_statuses::STATUS});
-        $this->document->setValue(Generator::PERSON . Generator::HOMEPAGE . self::VALUE, $person->{persons::HOMEPAGE});
+        $this->document->setValue(Generator::PERSON . Generator::ADDRESS . Generator::VALUE, $person->{persons::ADDRESS});
+        $this->document->setValue(Generator::PERSON . Generator::PHONE . Generator::VALUE, $person->{persons::PHONE});
+        $this->document->setValue(Generator::PERSON . Generator::EMAIL . Generator::VALUE, $person->{persons::EMAIL});
+        $this->document->setValue(Generator::PERSON . Generator::SKYPE . Generator::VALUE, $person->{persons::SKYPE});
+        $this->document->setValue(Generator::PERSON . Generator::DATE_OF_BIRTH . Generator::VALUE, $person->{persons::DATE_OF_BIRTH});
+        $this->document->setValue(Generator::PERSON . Generator::PLACE_OF_BIRTH . Generator::VALUE, $person->{persons::PLACE_OF_BIRTH});
+        $this->document->setValue(Generator::PERSON . Generator::STATUS . Generator::VALUE, $person->{marital_statuses::STATUS});
+        $this->document->setValue(Generator::PERSON . Generator::HOMEPAGE . Generator::VALUE, $person->{persons::HOMEPAGE});
     }
 
     private function setEmploymentHistory($employers) {
         $count = count($employers);
 
         foreach ($employers as $employer) {
-            $this->document->setValue(Generator::EMPLOYER . $count . '_' . Generator::PERIOD . self::VALUE, I18n::localizedDate($employer->{employers::START_DATE}, $this->language) . ' - ' . I18n::localizedDate($employer->{employers::END_DATE}, $this->language));
-            $this->document->setValue(Generator::EMPLOYER . $count . '_' . Generator::COMPANY . self::VALUE, $employer->{employers::COMPANY});
-            $this->document->setValue(Generator::EMPLOYER . $count . '_' . Generator::HOMEPAGE . self::VALUE, $employer->{employers::HOMEPAGE});
-            $this->document->setValue(Generator::EMPLOYER . $count . '_' . Generator::ADDRESS . self::VALUE, $employer->{employers::ADDRESS});
-            $this->document->setValue(Generator::EMPLOYER . $count . '_' . Generator::POSITION . self::VALUE, $employer->{positions::POSITION});
-            $this->document->setValue(Generator::EMPLOYER . $count . '_' . Generator::RESPONSIBILITIES . self::VALUE, $employer->{employers::RESPONSIBILITIES});
+            $this->document->setValue(Generator::EMPLOYER . $count . Generator::UNDERSCORE . Generator::PERIOD . Generator::VALUE, I18n::localizedDate($employer->{employers::START_DATE}, $this->language) . ' - ' . I18n::localizedDate($employer->{employers::END_DATE}, $this->language));
+            $this->document->setValue(Generator::EMPLOYER . $count . Generator::UNDERSCORE . Generator::COMPANY . Generator::VALUE, $employer->{employers::COMPANY});
+            $this->document->setValue(Generator::EMPLOYER . $count . Generator::UNDERSCORE . Generator::HOMEPAGE . Generator::VALUE, $employer->{employers::HOMEPAGE});
+            $this->document->setValue(Generator::EMPLOYER . $count . Generator::UNDERSCORE . Generator::ADDRESS . Generator::VALUE, $employer->{employers::ADDRESS});
+            $this->document->setValue(Generator::EMPLOYER . $count . Generator::UNDERSCORE . Generator::POSITION . Generator::VALUE, $employer->{positions::POSITION});
+            $this->document->setValue(Generator::EMPLOYER . $count . Generator::UNDERSCORE . Generator::RESPONSIBILITIES . Generator::VALUE, $employer->{employers::RESPONSIBILITIES});
 
             $count--;
         }
@@ -130,12 +128,12 @@ class DocxGenerator {
         $count = count($educational_institutions);
 
         foreach ($educational_institutions as $university) {
-            $this->document->setValue(Generator::UNIVERSITY . $count . '_' . Generator::PERIOD . self::VALUE, I18n::localizedDate($university->{educations::START_DATE}, $this->language) . ' - ' . I18n::localizedDate($university->{educations::END_DATE}, $this->language));
-            $this->document->setValue(Generator::UNIVERSITY . $count . '_' . Generator::EDUCATIONAL_INSTITUTION . self::VALUE, $university->{educations::EDUCATIONAL_INSTITUTION});
-            $this->document->setValue(Generator::UNIVERSITY . $count . '_' . Generator::ADDRESS . self::VALUE, $university->{educations::ADDRESS});
-            $this->document->setValue(Generator::UNIVERSITY . $count . '_' . Generator::FACULTY . self::VALUE, $university->{educations::FACULTY});
-            $this->document->setValue(Generator::UNIVERSITY . $count . '_' . Generator::DEPARTMENT . self::VALUE, $university->{educations::DEPARTMENT});
-            $this->document->setValue(Generator::UNIVERSITY . $count . '_' . Generator::QUALIFICATION . self::VALUE, $university->{educations::QUALIFICATION});
+            $this->document->setValue(Generator::UNIVERSITY . $count . Generator::UNDERSCORE . Generator::PERIOD . Generator::VALUE, I18n::localizedDate($university->{educations::START_DATE}, $this->language) . ' - ' . I18n::localizedDate($university->{educations::END_DATE}, $this->language));
+            $this->document->setValue(Generator::UNIVERSITY . $count . Generator::UNDERSCORE . Generator::EDUCATIONAL_INSTITUTION . Generator::VALUE, $university->{educations::EDUCATIONAL_INSTITUTION});
+            $this->document->setValue(Generator::UNIVERSITY . $count . Generator::UNDERSCORE . Generator::ADDRESS . Generator::VALUE, $university->{educations::ADDRESS});
+            $this->document->setValue(Generator::UNIVERSITY . $count . Generator::UNDERSCORE . Generator::FACULTY . Generator::VALUE, $university->{educations::FACULTY});
+            $this->document->setValue(Generator::UNIVERSITY . $count . Generator::UNDERSCORE . Generator::DEPARTMENT . Generator::VALUE, $university->{educations::DEPARTMENT});
+            $this->document->setValue(Generator::UNIVERSITY . $count . Generator::UNDERSCORE . Generator::QUALIFICATION . Generator::VALUE, $university->{educations::QUALIFICATION});
 
             $count--;
         }
@@ -151,8 +149,8 @@ class DocxGenerator {
                 $languageLevel = $language->{languages::LEVEL} . $cefr;
             }
 
-            $this->document->setValue(Generator::LANGUAGE . $count . self::VALUE, $language->{languages::LANGUAGE});
-            $this->document->setValue(Generator::LANGUAGE . $count . '_' . Generator::LEVEL . self::VALUE, $languageLevel);
+            $this->document->setValue(Generator::LANGUAGE . $count . Generator::VALUE, $language->{languages::LANGUAGE});
+            $this->document->setValue(Generator::LANGUAGE . $count . Generator::UNDERSCORE . Generator::LEVEL . Generator::VALUE, $languageLevel);
 
             $count++;
         }
@@ -162,9 +160,9 @@ class DocxGenerator {
         $count = count($coursesAndCertificates);
 
         foreach ($coursesAndCertificates as $certificate) {
-            $this->document->setValue(Generator::CAC . $count . '_' . Generator::TITLE . self::VALUE, $certificate->{courses_and_certificates::TITLE});
-            $this->document->setValue(Generator::CAC . $count . '_' . Generator::AWARDED . self::VALUE, $certificate->{courses_and_certificates::AWARDED});
-            $this->document->setValue(Generator::CAC . $count . '_' . Generator::DATE . self::VALUE, I18n::localizedDate($certificate->{courses_and_certificates::DATE}, $this->language));
+            $this->document->setValue(Generator::CAC . $count . Generator::UNDERSCORE . Generator::TITLE . Generator::VALUE, $certificate->{courses_and_certificates::TITLE});
+            $this->document->setValue(Generator::CAC . $count . Generator::UNDERSCORE . Generator::AWARDED . Generator::VALUE, $certificate->{courses_and_certificates::AWARDED});
+            $this->document->setValue(Generator::CAC . $count . Generator::UNDERSCORE . Generator::DATE . Generator::VALUE, I18n::localizedDate($certificate->{courses_and_certificates::DATE}, $this->language));
 
             $count--;
         }
@@ -182,12 +180,12 @@ class DocxGenerator {
             if ($previousCategory !== $category) {
                 $categoryNumber++;
                 $count = 1;
-                $this->document->setValue('skills_' . 'c' . $categoryNumber, $skill->{skill_categories::CATEGORY});
+                $this->document->setValue(Generator::SKILLS . Generator::C . $categoryNumber, $skill->{skill_categories::CATEGORY});
             }
 
-            $this->document->setValue('c' . $categoryNumber . '_' . 't' . $count . '_' . 'name', $skill->{technical_skills::TECHNOLOGY});
-            $this->document->setValue('c' . $categoryNumber . '_' . 't' . $count . '_' . 'e', $skill->{technical_skills::EXPERIENCE});
-            $this->document->setValue('c' . $categoryNumber . '_' . 't' . $count . '_' . 'p', $skill->{skill_proficiencies::PROFICIENCY});
+            $this->document->setValue(Generator::C . $categoryNumber . Generator::UNDERSCORE . Generator::T . $count . Generator::UNDERSCORE . Generator::N, $skill->{technical_skills::TECHNOLOGY});
+            $this->document->setValue(Generator::C . $categoryNumber . Generator::UNDERSCORE . Generator::T . $count . Generator::UNDERSCORE . Generator::E, $skill->{technical_skills::EXPERIENCE});
+            $this->document->setValue(Generator::C . $categoryNumber . Generator::UNDERSCORE . Generator::T . $count . Generator::UNDERSCORE . Generator::P, $skill->{skill_proficiencies::PROFICIENCY});
 
             $count++;
 
@@ -199,13 +197,13 @@ class DocxGenerator {
         $count = count($projects);
 
         foreach ($projects as $project) {
-            $this->document->setValue(Generator::PROJECT . $count . '_' . Generator::PROJECT_NAME . self::VALUE, $project->{projects::NAME});
-            $this->document->setValue(Generator::PROJECT . $count . '_' . Generator::PROJECT_DESCRIPTION . self::VALUE, $project->{projects::DESCRIPTION});
-            $this->document->setValue(Generator::PROJECT . $count . '_' . Generator::POSITION . self::VALUE, $project->{positions::POSITION});
-            $this->document->setValue(Generator::PROJECT . $count . '_' . Generator::RESPONSIBILITIES . self::VALUE, $project->{projects::RESPONSIBILITIES});
-            $this->document->setValue(Generator::PROJECT . $count . '_' . Generator::TECHNOLOGIES . self::VALUE, $project->{projects::TECHNOLOGIES});
-            $this->document->setValue(Generator::PROJECT . $count . '_' . Generator::OPERATING_SYSTEMS . self::VALUE, $project->{projects::OPERATING_SYSTEMS});
-            $this->document->setValue(Generator::PROJECT . $count . '_' . Generator::PROJECT_DURATION . self::VALUE, I18n::localizedDate($project->{projects::START_DATE}, $this->language) . ' - ' . I18n::localizedDate($project->{projects::END_DATE}, $this->language));
+            $this->document->setValue(Generator::PROJECT . $count . Generator::UNDERSCORE . Generator::PROJECT_NAME . Generator::VALUE, $project->{projects::NAME});
+            $this->document->setValue(Generator::PROJECT . $count . Generator::UNDERSCORE . Generator::PROJECT_DESCRIPTION . Generator::VALUE, $project->{projects::DESCRIPTION});
+            $this->document->setValue(Generator::PROJECT . $count . Generator::UNDERSCORE . Generator::POSITION . Generator::VALUE, $project->{positions::POSITION});
+            $this->document->setValue(Generator::PROJECT . $count . Generator::UNDERSCORE . Generator::RESPONSIBILITIES . Generator::VALUE, $project->{projects::RESPONSIBILITIES});
+            $this->document->setValue(Generator::PROJECT . $count . Generator::UNDERSCORE . Generator::TECHNOLOGIES . Generator::VALUE, $project->{projects::TECHNOLOGIES});
+            $this->document->setValue(Generator::PROJECT . $count . Generator::UNDERSCORE . Generator::OPERATING_SYSTEMS . Generator::VALUE, $project->{projects::OPERATING_SYSTEMS});
+            $this->document->setValue(Generator::PROJECT . $count . Generator::UNDERSCORE . Generator::PROJECT_DURATION . Generator::VALUE, I18n::localizedDate($project->{projects::START_DATE}, $this->language) . ' - ' . I18n::localizedDate($project->{projects::END_DATE}, $this->language));
 
             $count--;
         }

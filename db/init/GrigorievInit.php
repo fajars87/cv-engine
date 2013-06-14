@@ -351,7 +351,7 @@ class GrigorievInit {
         );
         $sql .= self::getLanguageInsert(
             $class::LANGUAGE_GERMAN,
-            $class::LANGUAGE_LEVEL_A2,
+            $class::LANGUAGE_LEVEL_B1,
             $personId
         );
         $sql .= self::getLanguageInsert(
@@ -425,6 +425,12 @@ class GrigorievInit {
             $class::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_TITLE,
             $class::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_AWARDED,
             $class::COURSE_AND_CERTIFICATE_PRAGMATIC_TDD_DATE,
+            $personId
+        );
+        $sql .= self::getCourseAndCertificateInsert(
+            $class::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_TITLE,
+            $class::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_AWARDED,
+            $class::COURSE_AND_CERTIFICATE_GOETHE_ZERTIFIKAT_B1_DATE,
             $personId
         );
 
