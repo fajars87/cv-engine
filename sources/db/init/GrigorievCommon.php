@@ -292,4 +292,7 @@ class GrigorievCommon {
     const SKILL_CATEGORY_ID_WEB_AND_APPLICATION_SERVERS = 5;
     const SKILL_CATEGORY_ID_CASE_AND_PROJECT_TOOLS = 6;
     const SKILL_CATEGORY_ID_IDES = 7;
+
+    const PDF_EXT = '.pdf';
+    const DOCX_EXT = '.docx';
 }

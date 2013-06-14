@@ -62,6 +62,4 @@ class Generator {
     const TECHNOLOGIES = 'technologies';
     const OPERATING_SYSTEMS = 'operating_systems';
     const PROJECT_DURATION = 'project_duration';
-
-
 }

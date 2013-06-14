@@ -49,6 +49,7 @@
                 <exclude name="**/files/*template*"/>
                 <exclude name="**/db/init/*Init*"/>
                 <exclude name="**/utils/generator/**"/>
+                <exclude name="**/*Generator*"/>
             </fileset>
         </copy>
 

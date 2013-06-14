@@ -1353,7 +1353,7 @@ class GrigorievInit {
         $sql .= self::getI18nTranslationInsert(
             $languageId,
             $class::I18N_TRANSLATION_ID_URL_DOWNLOAD_PDF_VERSION,
-            $class::I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION
+            $class::I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PRINTABLE_VERSION . GrigorievCommon::PDF_EXT
         );
 
         return self::$db->exec($sql);
