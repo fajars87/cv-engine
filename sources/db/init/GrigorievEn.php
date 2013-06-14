@@ -128,4 +128,5 @@ class GrigorievEn extends GrigorievCommon {
     const I18N_TRANSLATION_VALUE_LANGUAGE_CEFR_URL = 'http://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages';
     const I18N_TRANSLATION_VALUE_TECHNOLOGIES = 'Technologies';
     const I18N_TRANSLATION_VALUE_OPERATING_SYSTEMS = 'Operating Systems';
+    const I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION = 'files/S.Grigoriev_CV.pdf';
 }

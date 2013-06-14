@@ -9,15 +9,15 @@ class DocxGenerator {
     private $language;
 
     public function generateDocumentEn() {
-        $this->generateDocument(Language::LANG_EN, dirname(__FILE__) . '/files/S.Grigoriev_CV.docx');
+        $this->generateDocument(Language::LANG_EN, dirname(__FILE__) . '/' . GrigorievEn::I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION);
     }
 
     public function generateDocumentDe() {
-        $this->generateDocument(Language::LANG_DE, dirname(__FILE__) . '/files/S.Grigoriev_Lebenslauf.docx');
+        $this->generateDocument(Language::LANG_DE, dirname(__FILE__) . '/' . GrigorievDe::I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION);
     }
 
     public function generateDocumentRu() {
-        $this->generateDocument(Language::LANG_RU, dirname(__FILE__) . iconv('UTF-8', 'WINDOWS-1251', '/files/С.Григорьев_резюме.docx'));
+        $this->generateDocument(Language::LANG_RU, dirname(__FILE__) . '/' . GrigorievRu::I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION);
     }
 
     public function generateDocument($lang, $output) {

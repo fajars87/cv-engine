@@ -128,4 +128,5 @@ class GrigorievDe extends GrigorievCommon {
     const I18N_TRANSLATION_VALUE_LANGUAGE_CEFR_URL = 'http://de.wikipedia.org/wiki/Gemeinsamer_Europ%C3%A4ischer_Referenzrahmen';
     const I18N_TRANSLATION_VALUE_TECHNOLOGIES = 'Technologien';
     const I18N_TRANSLATION_VALUE_OPERATING_SYSTEMS = 'Betriebssysteme';
+    const I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION = 'files/S.Grigoriev_Lebenslauf.pdf';
 }

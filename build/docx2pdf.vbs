@@ -2,9 +2,8 @@ Option Explicit
  
 Const CV_EN = "..\sources\files\S.Grigoriev_CV.docx"
 Const CV_DE = "..\sources\files\S.Grigoriev_Lebenslauf.docx"
-Const CV_RU = "..\sources\files\С.Григорьев_резюме.docx"
- 
- 
+Const CV_RU = "..\sources\files\S.Grigoriev_resume.docx"
+
 'Call the main routine
 Main
 
@@ -12,7 +11,7 @@ Main
 Sub Main()
 	SaveWordAsPDF(CV_EN)
 	SaveWordAsPDF(CV_DE)
-	SaveWordAsPDF(StrConv(CV_RU, "UTF-8", "windows-1251"))
+	SaveWordAsPDF(CV_RU)
 End Sub
  
 ' This subroutine opens a Word document, then saves it as PDF, and closes Word.
@@ -41,16 +40,3 @@ Sub SaveWordAsPDF(inputFile)
 
 	objWord.Quit
 End Sub
-
-Function StrConv(Text,SourceCharset,DestCharset)
-	Dim Stream
-	Set Stream = CreateObject("ADODB.Stream")
-	Stream.Type = 2
-	Stream.Mode = 3
-	Stream.Open
-	Stream.Charset = DestCharset
-	Stream.WriteText Text
-	Stream.Position = 0
-	Stream.Charset = SourceCharset
-	StrConv = Stream.ReadText
-End Function

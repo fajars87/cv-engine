@@ -61,6 +61,7 @@ class DbTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(GrigorievEn::I18N_TRANSLATION_VALUE_LANGUAGE_CEFR_URL, $sg_en[GrigorievCommon::I18N_TRANSLATION_ID_LANGUAGE_CEFR_URL]->{i18n_translations::VALUE});
         $this->assertEquals(GrigorievEn::I18N_TRANSLATION_VALUE_TECHNOLOGIES, $sg_en[GrigorievCommon::I18N_TRANSLATION_ID_TECHNOLOGIES]->{i18n_translations::VALUE});
         $this->assertEquals(GrigorievEn::I18N_TRANSLATION_VALUE_OPERATING_SYSTEMS, $sg_en[GrigorievCommon::I18N_TRANSLATION_ID_OPERATING_SYSTEMS]->{i18n_translations::VALUE});
+        $this->assertEquals(GrigorievEn::I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION, $sg_en[GrigorievCommon::I18N_TRANSLATION_ID_URL_DOWNLOAD_PDF_VERSION]->{i18n_translations::VALUE});
     }
 
     public function testGetI18nMessagesDe() {
@@ -108,6 +109,7 @@ class DbTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(GrigorievDe::I18N_TRANSLATION_VALUE_LANGUAGE_CEFR_URL, $sg_de[GrigorievCommon::I18N_TRANSLATION_ID_LANGUAGE_CEFR_URL]->{i18n_translations::VALUE});
         $this->assertEquals(GrigorievDe::I18N_TRANSLATION_VALUE_TECHNOLOGIES, $sg_de[GrigorievCommon::I18N_TRANSLATION_ID_TECHNOLOGIES]->{i18n_translations::VALUE});
         $this->assertEquals(GrigorievDe::I18N_TRANSLATION_VALUE_OPERATING_SYSTEMS, $sg_de[GrigorievCommon::I18N_TRANSLATION_ID_OPERATING_SYSTEMS]->{i18n_translations::VALUE});
+        $this->assertEquals(GrigorievDe::I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION, $sg_de[GrigorievCommon::I18N_TRANSLATION_ID_URL_DOWNLOAD_PDF_VERSION]->{i18n_translations::VALUE});
     }
 
     public function testGetI18nMessagesRu() {
@@ -155,6 +157,7 @@ class DbTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(GrigorievRu::I18N_TRANSLATION_VALUE_LANGUAGE_CEFR_URL, $sg_ru[GrigorievCommon::I18N_TRANSLATION_ID_LANGUAGE_CEFR_URL]->{i18n_translations::VALUE});
         $this->assertEquals(GrigorievRu::I18N_TRANSLATION_VALUE_TECHNOLOGIES, $sg_ru[GrigorievCommon::I18N_TRANSLATION_ID_TECHNOLOGIES]->{i18n_translations::VALUE});
         $this->assertEquals(GrigorievRu::I18N_TRANSLATION_VALUE_OPERATING_SYSTEMS, $sg_ru[GrigorievCommon::I18N_TRANSLATION_ID_OPERATING_SYSTEMS]->{i18n_translations::VALUE});
+        $this->assertEquals(GrigorievRu::I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION, $sg_ru[GrigorievCommon::I18N_TRANSLATION_ID_URL_DOWNLOAD_PDF_VERSION]->{i18n_translations::VALUE});
     }
 
 ///////////////////////////

@@ -1350,6 +1350,11 @@ class GrigorievInit {
             $class::I18N_TRANSLATION_ID_OPERATING_SYSTEMS,
             $class::I18N_TRANSLATION_VALUE_OPERATING_SYSTEMS
         );
+        $sql .= self::getI18nTranslationInsert(
+            $languageId,
+            $class::I18N_TRANSLATION_ID_URL_DOWNLOAD_PDF_VERSION,
+            $class::I18N_TRANSLATION_VALUE_URL_DOWNLOAD_PDF_VERSION
+        );
 
         return self::$db->exec($sql);
     }

@@ -57,48 +57,28 @@
         <delete dir="${tmp.dir}"/>
     </target>
 
-    <target name="deploy">
+    <target name="deploy" depends="dist">
         <mkdir dir="${tmp.dir}"/>
 
         <unzip src="${dist.dir}/${zip.name}" dest="${tmp.dir}"/>
 
         <!-- create folder to deploy; if already exists: nothing to do -->
-        <ftp action="mkdir"
-             server="${ftp.hostname}"
-             userid="${ftp.username}"
-             password="${ftp.password}"
-             remotedir="${ftp.remotedir}"/>
+        <ftp action="mkdir" server="${ftp.hostname}" userid="${ftp.username}" password="${ftp.password}" remotedir="${ftp.remotedir}"/>
 
-        <!-- if folder exists: remove content in two steps -- first all files, then all folders; if folder is empty -- nothing to delete -->
-        <ftp action="del"
-             server="${ftp.hostname}"
-             userid="${ftp.username}"
-             password="${ftp.password}"
-             remotedir="${ftp.remotedir}">
+        <!-- if folder exists: remove content in two steps: first all files, then all folders; if folder is empty: nothing to delete -->
+        <ftp action="del" server="${ftp.hostname}" userid="${ftp.username}" password="${ftp.password}" remotedir="${ftp.remotedir}">
             <fileset>
                 <include name="**/*"/>
             </fileset>
         </ftp>
 
-        <ftp action="rmdir"
-             server="${ftp.hostname}"
-             userid="${ftp.username}"
-             password="${ftp.password}"
-             remotedir="${ftp.remotedir}">
+        <ftp action="rmdir" server="${ftp.hostname}" userid="${ftp.username}" password="${ftp.password}" remotedir="${ftp.remotedir}">
             <fileset>
                 <include name="**/*"/>
             </fileset>
         </ftp>
 
-        <ftp server="${ftp.hostname}"
-             port="${ftp.port}"
-             userid="${ftp.username}"
-             password="${ftp.password}"
-             remotedir="${ftp.remotedir}"
-             passive="no"
-             depends="no"
-             binary="yes"
-             verbose="yes">
+        <ftp server="${ftp.hostname}" port="${ftp.port}" userid="${ftp.username}" password="${ftp.password}" remotedir="${ftp.remotedir}" passive="no" depends="no" binary="yes" verbose="yes">
             <fileset dir="${tmp.dir}">
                 <include name="**"/>
             </fileset>

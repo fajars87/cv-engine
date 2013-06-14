@@ -85,8 +85,8 @@ class CVPage extends AbstractPage {
             '				<table class = "links">' . PHP_EOL .
             '					<tbody>' . PHP_EOL .
             '						<tr>' . PHP_EOL .
-            '							<td> <a href = "' . '' . '"> <img src = "template/images/ext/pdf.png" height = "32" width = "32" alt = "PDF" /> </a> </td>' . PHP_EOL .
-            '							<td> <a href = "' . '' . '" style = "color:#EEEEEE;">' . $this->I18nMessages[GrigorievCommon::I18N_TRANSLATION_ID_DOWNLOAD_PDF_VERSION]->{i18n_translations::VALUE} . '</a> </td>' . PHP_EOL .
+            '							<td> <a href = "' . $this->I18nMessages[GrigorievCommon::I18N_TRANSLATION_ID_URL_DOWNLOAD_PDF_VERSION]->{i18n_translations::VALUE} . '"> <img src = "template/images/ext/pdf.png" height = "32" width = "32" alt = "PDF" /> </a> </td>' . PHP_EOL .
+            '							<td> <a href = "' . $this->I18nMessages[GrigorievCommon::I18N_TRANSLATION_ID_URL_DOWNLOAD_PDF_VERSION]->{i18n_translations::VALUE} . '" style = "color:#EEEEEE;">' . $this->I18nMessages[GrigorievCommon::I18N_TRANSLATION_ID_DOWNLOAD_PDF_VERSION]->{i18n_translations::VALUE} . '</a> </td>' . PHP_EOL .
             '						</tr>' . PHP_EOL .
             '					</tbody>' . PHP_EOL .
             '				</table>' . PHP_EOL .
