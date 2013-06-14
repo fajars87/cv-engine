@@ -89,6 +89,6 @@
             </fileset>
         </ftp>
 
-
+        <delete dir="${tmp.dir}"/>
     </target>
 </project>
