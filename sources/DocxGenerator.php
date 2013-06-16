@@ -4,7 +4,7 @@
  */
 
 class DocxGenerator {
-    const TEMPLATE = '/files/S.Grigoriev_template.docx';
+    const TEMPLATE = '/files/S.Grigoriev_CV_template.docx';
     private $PHPWord;
     private $document;
     private $language;

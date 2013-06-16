@@ -45,6 +45,7 @@
                 <include name="**/template/**"/>
                 <include name="**/*.php"/>
                 <include name="**/*.sqlite"/>
+                <include name="**/.htaccess"/>
 
                 <exclude name="**/files/*template*"/>
                 <exclude name="**/db/init/*Init*"/>
