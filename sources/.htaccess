@@ -1,0 +1,4 @@
+<Files ~ "\.(docx|sqlite|txt)$">
+  Order Deny,Allow
+  Deny from all
+</Files>
