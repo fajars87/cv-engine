@@ -4,6 +4,7 @@
  */
 
 class DocxGenerator {
+    const TEMPLATE = '/files/S.Grigoriev_template.docx';
     private $PHPWord;
     private $document;
     private $language;
@@ -27,7 +28,7 @@ class DocxGenerator {
         $db->connect();
 
         $this->PHPWord = new PHPWord();
-        $this->document = $this->PHPWord->loadTemplate(dirname(__FILE__) . '/files/S.Grigoriev_CV_template.docx');
+        $this->document = $this->PHPWord->loadTemplate(dirname(__FILE__) . DocxGenerator::TEMPLATE);
 
         $person = $db->getPersonalInformation($lang);
         $I18nMessages = $db->getI18nMessages($person->{persons::FK_I18N_LANGUAGE_ID});
