@@ -1,0 +1,6 @@
+#Ftp settings
+ftp.hostname = <hostname goes here>
+ftp.port = 21
+ftp.username = <username goes here>
+ftp.password = <password goes here>
+ftp.remotedir = <remote ftp dir goes here>
