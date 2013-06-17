@@ -1,5 +1,6 @@
 <project name="cv-engine" default="dist" basedir="..">
-    <property file="${basedir}/build/build.properties"/>
+    <property name="build.properties.file" value="${basedir}/build/build.properties">
+    <property file="${build.properties.file}"/>
 
     <property name="src.dir" value="${basedir}/sources"/>
     <property name="dist.dir" value="${basedir}/dist"/>
@@ -59,7 +60,11 @@
         <delete dir="${tmp.dir}"/>
     </target>
 
-    <target name="deploy" depends="dist">
+    <available file="${build.properties.file}" property="isBuildPropertiesAvailable"/>
+
+    <target name="deploy" depends="dist" unless="isBuildPropertiesAvailable">
+        <fail message="${build.properties.file} file is not available. deploy stopped."/>
+
         <mkdir dir="${tmp.dir}"/>
 
         <unzip src="${dist.dir}/${zip.name}" dest="${tmp.dir}"/>
