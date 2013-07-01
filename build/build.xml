@@ -1,11 +1,12 @@
 <project name="cv-engine" default="dist" basedir="..">
-    <property file="${basedir}/build/build.properties"/>
-
     <property name="src.dir" value="${basedir}/sources"/>
     <property name="dist.dir" value="${basedir}/dist"/>
     <property name="tmp.dir" value="${basedir}/tmp"/>
     <property name="tests.dir" value="${basedir}/tests"/>
     <property name="build.dir" value="${basedir}/build"/>
+
+    <property name="build.properties.file" value="build.properties"/>
+    <property file="${build.dir}/${build.properties.file}"/>
 
     <property name="zip.name" value="dist.zip"/>
 
@@ -60,6 +61,18 @@
     </target>
 
     <target name="deploy" depends="dist">
+        <fail message="${build.dir}/${build.properties.file} file is not available. deploy stopped.">
+            <condition>
+                <not>
+                    <resourcecount count="1">
+                        <fileset dir="${build.dir}">
+                            <filename name="${build.properties.file}"/>
+                        </fileset>
+                    </resourcecount>
+                </not>
+            </condition>
+        </fail>
+
         <mkdir dir="${tmp.dir}"/>
 
         <unzip src="${dist.dir}/${zip.name}" dest="${tmp.dir}"/>
